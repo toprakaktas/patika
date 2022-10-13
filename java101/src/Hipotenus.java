@@ -16,14 +16,14 @@ public class Hipotenus {
         int first,second,third;
         Scanner cvr=new Scanner(System.in);
         System.out.print("Birinci kenarı giriniz: ");
-        a = cvr.nextInt();
+        first = cvr.nextInt();
         System.out.print("İkinci kenarı giriniz: ");
-        b = cvr.nextInt();
+        second = cvr.nextInt();
         System.out.print("Üçüncü kenarı giriniz: ");
-        c = cvr.nextInt();
+        third = cvr.nextInt();
 
-        double u = (a+b+c)/2;
-        double area = Math.sqrt(u*(u-a)*(u-b)*(u-c));
+        double u = (first+second+third)/2;
+        double area = Math.sqrt(u*(u-first)*(u-second)*(u-third));
         System.out.println("Üçgenin alanı: "+area);
     }
 }
