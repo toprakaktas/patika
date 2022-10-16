@@ -19,7 +19,6 @@ public class FlightTicket {
         if (distance < 0 || age < 0 || (type > 2 || type < 1)) {
             System.out.println("Error, wrong information!");
         } else {
-
             if (age < 12) {
                 sale = ticketPrice / 2;
                 ticketPrice = ticketPrice - sale;
