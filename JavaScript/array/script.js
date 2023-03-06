@@ -90,3 +90,55 @@ console.log(allUsers.join("---"))
 //splice(index, 0, value)
 allUsers.splice(allUsers.length/2, 0, "Melissa")
 console.log(allUsers)
+
+//filter
+const PRODUCTS = ["Mic", "Cable", "Speaker", "Desktop PC", "Server", "Mouse", "Keyboard"]
+//more than 5 letters 
+const NEW_PRODUCTS = PRODUCTS.filter(item => item.length > 5)
+console.log(NEW_PRODUCTS)
+
+const USERS = [
+    {fullName: "John Doe", isActive: false},
+    {fullName: "Jane Doe", isActive: true},
+    {fullName: "Toprak Aktaş", isActive: true},
+    {fullName: "ZS O", isActive: false},
+]
+
+const ACTIVE_USERS = USERS.filter(user => user.isActive === true) //or (user => user.isActive) for true
+console.log(ACTIVE_USERS)
+
+//exercise for patika
+const person = [{
+    name: "Adem",
+    age: 25,
+    languages: ["JavaScript", "CSS"],
+  },
+  {
+    name: "Oğuz",
+    age: 33,
+    languages: ["Java", "HTML"],
+    }
+]
+//age > 30
+const olderPerson = person.filter(older => older.age > 30)
+console.log(olderPerson)
+
+//lang: js
+const knowJS = person.filter(elem => elem.languages.includes("JavaScript"))
+console.log(knowJS)
+
+//map
+//userName stays original
+//shortName first letter uppercase with . (T.)
+//newName first letter uppercase
+const PEOPLE = ["JOHN", "CaTe", "TopRAK", "MinA"]
+const NEW_PEOPLE = PEOPLE.map(people => people.toLowerCase())
+console.log(NEW_PEOPLE)
+
+const PEOPLE_OBJ = PEOPLE.map( item =>
+    {
+        return {userName: item, shortName: `${item[0]}.`, newName: `${item[0].toUpperCase()}${item.slice(1).toLowerCase()}`}
+    }
+)
+
+console.log(PEOPLE_OBJ)
